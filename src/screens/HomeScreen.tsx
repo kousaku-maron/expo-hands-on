@@ -17,7 +17,7 @@ const HomeScreen = () => {
           ### レッスン4: ツイート内容をログに表示させてみよう ###
           1. ボタンを押した時に、"onTweet"を実行するようにしてみよう。
         */}
-        <TouchableOpacity style={styles.tweetButton}>
+        <TouchableOpacity style={styles.tweetButton} onPress={() => onTweet(text)}>
           <Text style={styles.tweetButtonText}>ツイートする</Text>
         </TouchableOpacity>
       </View>
@@ -27,6 +27,7 @@ const HomeScreen = () => {
         1. TextInputコンポーネントを使い、テキストボックスを設置してみよう。
         styleは"input"を使おう。
       */}
+      <TextInput style={styles.input} multiline={true} value={text} onChangeText={setText} />
     </View>
   )
 }
